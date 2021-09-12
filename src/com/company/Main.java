@@ -37,20 +37,58 @@ public class Main {
 //        System.out.println("File present "+present);
 
         //Rename file
-        File file = new File("C:\\Users\\hipho\\Desktop\\sandy\\santhoshkumar.txt");
-        try {
-            file.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        boolean present = file.exists();
-       System.out.println("File present "+present);
-       File newName = new File("C:\\Users\\hipho\\Desktop\\sandy\\hiphopsandy.txt");
-       boolean renameSuccess=file.renameTo(newName);
-        System.out.println(" renameSuccess" + renameSuccess);
+//        File file = new File("C:\\Users\\hipho\\Desktop\\sandy\\santhoshkumar.txt");
+//        try {
+//            file.createNewFile();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        boolean present = file.exists();
+//       System.out.println("File present "+present);
+//       File newName = new File("C:\\Users\\hipho\\Desktop\\sandy\\hiphopsandy.txt");
+//       boolean renameSuccess=file.renameTo(newName);
+//        System.out.println(" renameSuccess" + renameSuccess);
+//
+//        //get file name
+//        System.out.println("File name" + ":" + newName.getName());
 
-        //get file name
-        System.out.println("File name" + ":" + newName.getName());
+        //list of all file & folders name in specific  directory
+//        File file = new File("C:\\Users\\hipho\\Desktop");
+//        String [] listOfFilesFolders = file.list();
+////        for(int i=0;i<listOfFilesFolders.length;i++)
+////            System.out.println(listOfFilesFolders[i]);
+//        //for each
+//        for( String s: listOfFilesFolders)
+//        System.out.println(s);
+
+//        //list all file folder with path
+//        File file = new File("C:\\Users\\hipho\\Desktop");
+//        File [] listOfFiles = file.listFiles();
+//        for( File f: listOfFiles)
+//            System.out.println(f);
+        //list folder only
+//        File file = new File("C:\\Users\\hipho\\Desktop");
+//        File [] listOfFolders = file.listFiles();
+//        for( File f: listOfFolders)
+//        if(f.isDirectory())
+//            System.out.println(f);
+
+        //list only text files
+        File file = new File("C:\\Users\\hipho\\Desktop");
+        File [] FileArray = file.listFiles();
+        for(File f : FileArray)
+        {
+            if(f.isFile()){
+               String fileName =f.getName();
+               int lastDot = fileName.lastIndexOf(".");
+               String extension = fileName.substring(lastDot+1);
+               if(extension.equals("txt"))
+                   System.out.println(fileName);
+            }
+        }
+
+
+
 
 
     }
