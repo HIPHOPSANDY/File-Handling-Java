@@ -1,6 +1,8 @@
 package com.company;
 
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
@@ -74,21 +76,38 @@ public class Main {
 //            System.out.println(f);
 
         //list only text files
-        File file = new File("C:\\Users\\hipho\\Desktop");
-        File [] FileArray = file.listFiles();
-        for(File f : FileArray)
-        {
-            if(f.isFile()){
-               String fileName =f.getName();
-               int lastDot = fileName.lastIndexOf(".");
-               String extension = fileName.substring(lastDot+1);
-               if(extension.equals("txt"))
-                   System.out.println(fileName);
-            }
-        }
-
-
-
+//        File file = new File("C:\\Users\\hipho\\Desktop");
+//        File [] FileArray = file.listFiles();
+//        for(File f : FileArray)
+//        {
+//            if(f.isFile()){
+//               String fileName =f.getName();
+//               int lastDot = fileName.lastIndexOf(".");
+//               String extension = fileName.substring(lastDot+1);
+//               if(extension.equals("txt"))
+//                   System.out.println(fileName);
+//            }
+//        }
+            //create a file , then  file reader and writer
+//        File file = new File("C:\\Users\\hipho\\Desktop\\sandy\\learing\\java\\santhosh.txt");
+//
+//        try {
+//            file.createNewFile();
+//            FileWriter writer= new FileWriter(file);
+//            writer.write("hello santhosh");
+//            writer.flush();
+//            writer.close();
+//            FileReader filereader = new FileReader(file);
+//            int output = filereader.read();
+//            while(output != -1) {
+//                System.out.print((char) output);
+//                output =filereader.read();
+//            }
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        // file buffer reader and buffer writer
 
 
     }
